@@ -25,7 +25,6 @@ function Logo({ mobile = false }) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   return (
     <a
       href="#home"
