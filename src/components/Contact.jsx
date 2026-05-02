@@ -54,7 +54,7 @@ export default function Contact() {
   const socialLinks = [
     {
       icon: GithubIcon,
-      href: "https://github.com/hassanmkazmi123",
+      href: "https://github.com/hassankazmi123",
       label: "GitHub",
     },
     {
