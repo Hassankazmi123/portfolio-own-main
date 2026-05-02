@@ -13,7 +13,7 @@ const experiences = [
     role: "Founder & CEO",
     company: "Nexiva Tech",
     location: "Pakistan",
-    period: "Nov 2025 — Present",
+    period: "July 2025 — Present",
     description: [
       "Leading company vision, technical strategy, and product roadmap across all client engagements",
       "Building and managing a high-performing engineering team focused on scalable backend solutions",
@@ -25,7 +25,7 @@ const experiences = [
     role: "Senior Backend Developer",
     company: "Nexiva Tech",
     location: "Faisalabad, Punjab, Pakistan",
-    period: "Nov 2025 — Present",
+    period: "July 2025 — Present",
     description: [
       "Architecting and developing RESTful APIs and real-time backend systems using ASP.NET Core and Node.js",
       "Designing and optimizing relational and non-relational databases with PostgreSQL and MongoDB",
