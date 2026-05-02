@@ -94,7 +94,6 @@ export default function Testimonials() {
     setCurrent(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
-
   return (
     <section
       id="testimonials"
