@@ -48,7 +48,7 @@ const projects = [
     title: "Packages",
     description:
       "A premium furniture e-commerce store offering curated packages, curtains, lighting, mattresses, deco & textiles, and design services — all in one elegant shopping experience.",
-    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    tech: ["Next.js", "Tailwind CSS", "MongoDB"],
     gradient: "linear-gradient(135deg, #3b1f0e, #c47c3e)",
     live: "https://www.tukadubai.com/",
   },
