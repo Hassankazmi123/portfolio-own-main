@@ -1,6 +1,7 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import { useTheme } from "../hooks/useTheme";
 
 const projects = [
   {
@@ -28,73 +29,34 @@ const projects = [
     live: "https://hyper-wave.vercel.app/",
   },
   {
-    title: "Brandsonify",
+    title: "ladyonepk",
     description:
-      "A modern branding and marketing platform that helps businesses scale their digital presence through intelligent design systems.",
+      "Pakistan's go-to beauty destination offering K-Beauty, skincare, haircare, makeup & fragrance — all in one place, with deals up to 70% off.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    gradient: "linear-gradient(135deg, #022e75, #10c6cc)",
+    live: "https://ladyonepk.com/",
+  },
+  {
+    title: "Dukan",
+    description:
+      "A Pakistani e-commerce platform empowering online sellers, retailers, and distributors to create their own store and sell online with ease.",
+    tech: ["Wordpress"],
+    gradient: "linear-gradient(135deg, #1a3c6e, #3dbf9e)",
+    live: "https://dukan.pk/",
+  },
+  {
+    title: "Packages",
+    description:
+      "A premium furniture e-commerce store offering curated packages, curtains, lighting, mattresses, deco & textiles, and design services — all in one elegant shopping experience.",
     tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    gradient: "linear-gradient(135deg, #022e75, #10c6cc)",
-    live: "https://brandsonify.vercel.app/",
-  },
-  {
-    title: "Manuscript HQ",
-    description:
-      "A content management and publishing ecosystem built for modern writers and high-scale digital publications.",
-    tech: ["Next.js", "React", "Node.js", "PostgreSQL"],
-    gradient: "linear-gradient(135deg, #0a4494, #3dd8de)",
-    live: "https://manuscripthq.com/",
-  },
-  {
-    title: "Elite Mindful Health",
-    description:
-      "A wellness and mental health platform focused on mindfulness, providing personalized resources for holistic well-being.",
-    tech: ["Next.js", "React", "Tailwind CSS", "Mental Health Tech"],
-    gradient: "linear-gradient(135deg, #022e75, #0a4494)",
-    live: "https://elitemindfulhealth.vercel.app/",
-  },
-  {
-    title: "Learning Chip",
-    description:
-      "An educational platform dedicated to making tech learning accessible through interactive chips and streamlined curricula.",
-    tech: ["React.js", "Redux", "Firebase", "Bootstrap"],
-    gradient: "linear-gradient(135deg, #0e9fa4, #10c6cc)",
-    live: "https://learningchip.org/",
-  },
-  {
-    title: "Npthrive",
-    description:
-      "A growth platform for non-profits, helping organizations maximize their social impact through digital transformation.",
-    tech: ["Next.js", "Tailwind CSS", "Analytics"],
-    gradient: "linear-gradient(135deg, #022e75, #10c6cc)",
-    live: "https://npthrive.vercel.app/",
-  },
-  {
-    title: "Emprenur",
-    description:
-      "A collaborative hub for entrepreneurs to network, share resources, and launch successful business ventures.",
-    tech: ["React.js", "Node.js", "Express", "MongoDB"],
-    gradient: "linear-gradient(135deg, #0a4494, #3dd8de)",
-    live: "https://emprenur.com/",
-  },
-  {
-    title: "Andrew Haley",
-    description:
-      "A premium professional portfolio showcasing branding, design, and development excellence for high-end clients.",
-    tech: ["React.js", "Custom CSS", "Framer Motion", "Branding"],
-    gradient: "linear-gradient(135deg, #022e75, #0a4494)",
-    live: "https://andrewhaley.ca/",
-  },
-  {
-    title: "Oratario",
-    description:
-      "An Italian-focused presentation and public speaking tool designed to help users deliver more impactful speeches.",
-    tech: ["React.js", "i18next", "Tailwind CSS", "Vite"],
-    gradient: "linear-gradient(135deg, #0e9fa4, #10c6cc)",
-    live: "https://easyoratorio.it/",
+    gradient: "linear-gradient(135deg, #3b1f0e, #c47c3e)",
+    live: "https://www.tukadubai.com/",
   },
 ];
 
 export default function Projects() {
   const [ref, isVisible] = useScrollReveal();
+  const isDark = useTheme();
 
   const [active, setActive] = useState(0);
   const carouselRef = useRef(null);
@@ -201,7 +163,7 @@ export default function Projects() {
                           }}
                         />
                         <div className="absolute inset-0 flex items-center justify-center lg:p-6 p-4">
-                          <span className="text-2xl sm:text-3xl font-black text-white/30 tracking-tighter uppercase select-none group-hover:scale-105 transition-all duration-700 ease-out">
+                          <span className={`text-2xl sm:text-3xl font-black ${isDark ? "text-white/20" : "text-white/40"} tracking-tighter uppercase select-none group-hover:scale-110 transition-all duration-700 ease-out`}>
                             {project.title}
                           </span>
                         </div>
