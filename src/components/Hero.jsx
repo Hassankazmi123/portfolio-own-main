@@ -109,7 +109,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <a
-              href="https://github.com/hassanmkazmi123"
+              href="https://github.com/hassankazmi123"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full transition-all duration-300 hover:text-accent hover:scale-110"
