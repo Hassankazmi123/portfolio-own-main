@@ -2,6 +2,7 @@ import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "./icons/BrandIcons";
 import Image from "next/image";
 import InteractiveGridBackground from "./InteractiveGridBackground";
+import { useTheme } from "../hooks/useTheme";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -20,6 +21,7 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const isDark = useTheme();
   return (
     <footer className="relative py-10 overflow-hidden bg-transparent">
 
@@ -39,7 +41,7 @@ export default function Footer() {
             <div className="flex flex-col items-center md:items-start max-w-sm">
               <div className="relative w-16 h-16 sm:w-20 sm:h-20 overflow-hidden rounded-full mb-6">
                 <Image
-                  src="/images/logos.png"
+                  src={isDark ? "/images/blacklogo.PNG" : "/images/logos.PNG"}
                   alt="Hassan Kazmi"
                   width={100}
                   height={100}

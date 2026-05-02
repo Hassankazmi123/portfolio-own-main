@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { ToggleTheme } from "./ToggleTheme";
+import { useTheme } from "../hooks/useTheme";
 
 const SERVICES = [
   { name: "Web Development", href: "#services" },
@@ -21,6 +22,7 @@ const SERVICES = [
 ];
 
 function Logo({ mobile = false }) {
+  const isDark = useTheme();
   const handleLogoClick = (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,7 +36,7 @@ function Logo({ mobile = false }) {
     >
       <div className="relative w-12 h-12 sm:w-14 sm:h-14 overflow-hidden rounded-full">
         <Image
-          src="/images/logos.png"
+          src={isDark ? "/images/blacklogo.PNG" : "/images/logos.PNG"}
           alt="Hassan Kazmi"
           width={100}
           height={100}

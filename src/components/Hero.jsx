@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowDown, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
 import { motion } from "framer-motion";
+import { useTheme } from "../hooks/useTheme";
 import FallBeamBackground from "./FallBeamBackground";
 
 const roles = [
@@ -16,6 +17,7 @@ export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const isDark = useTheme();
 
   useEffect(() => {
     const currentRole = roles[roleIndex];
@@ -152,7 +154,7 @@ export default function Hero() {
               className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden relative z-10 shadow-2xl"
             >
               <Image
-                src="/images/hassan.png"
+                src={isDark ? "/images/black.PNG" : "/images/hassan.PNG"}
                 alt="Hassan Kazmi"
                 width={500}
                 height={500}

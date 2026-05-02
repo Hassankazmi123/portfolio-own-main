@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { useTheme } from "../hooks/useTheme";
 import Image from "next/image";
 import { Code2, Users, Briefcase } from "lucide-react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
@@ -39,6 +40,7 @@ function Counter({ value, isVisible }) {
 
 export default function About() {
   const [ref, isVisible] = useScrollReveal({ once: false });
+  const isDark = useTheme();
 
   return (
     <section
@@ -64,7 +66,7 @@ export default function About() {
             <div className="relative">
               <div className="w-full h-[550px] sm:h-[650px] rounded-3xl premium-card-surface overflow-hidden shadow-xl border border-white/10 group relative">
                 <Image
-                  src="/images/kazmi.jpeg"
+                  src="/images/aboutme.jpeg"
                   alt="Hassan Kazmi"
                   width={1000}
                   height={1500}
